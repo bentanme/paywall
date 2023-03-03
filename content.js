@@ -1,13 +1,5 @@
 console.log('Ben\'s NZ Herald script is running');
 
-chrome.webRequest.onBeforeRequest.addListener(
-  function(details) {
-    return {cancel: details.url.indexOf("://www.nzherald.co.nz/") != -1};
-  },
-  {urls: ["://www.nzherald.co.nz/pf/dist/engine/*"]},
-  ["blocking"]
-);
-
 setTimeout(function() {
 
 	console.log('Ben\'s NZ Herald script has run');
